@@ -1,0 +1,19 @@
+# Stub — Session 2
+# Autonomous Build Pipeline GitHub Action
+# Trigger: cron every 2h or webhook from Nova
+name: CC Pipeline
+on:
+  workflow_dispatch:
+    inputs:
+      task_id:
+        description: 'Specific cc_queue task ID to process'
+        required: false
+
+jobs:
+  process-queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Placeholder
+        run: echo "Pipeline not yet implemented — Session 2"
